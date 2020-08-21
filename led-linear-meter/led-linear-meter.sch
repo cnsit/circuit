@@ -1,0 +1,332 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 7874 5906
+encoding utf-8
+Sheet 1 1
+Title "LED Linear Meter"
+Date "2020-08-21"
+Rev "v1.0"
+Comp "CNSIT"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L cnsit:LM3914 U?
+U 1 1 5F3FBB52
+P 3800 2250
+F 0 "U?" H 4750 2350 50  0000 L CNN
+F 1 "LM3914" H 4750 2250 50  0000 L CNN
+F 2 "" H 4200 2250 50  0001 C CNN
+F 3 "" H 4200 2250 50  0001 C CNN
+	1    3800 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F3FC8B5
+P 4200 2950
+F 0 "R1" H 3950 3000 50  0000 L CNN
+F 1 "3.6k" H 3950 2900 50  0000 L CNN
+F 2 "" V 4130 2950 50  0001 C CNN
+F 3 "~" H 4200 2950 50  0001 C CNN
+	1    4200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F3FD549
+P 4200 3350
+F 0 "R2" H 3950 3400 50  0000 L CNN
+F 1 "12k" H 3950 3300 50  0000 L CNN
+F 2 "" V 4130 3350 50  0001 C CNN
+F 3 "~" H 4200 3350 50  0001 C CNN
+	1    4200 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2650 4200 2700
+Wire Wire Line
+	4000 2650 4000 2700
+Wire Wire Line
+	4000 2700 4200 2700
+Connection ~ 4200 2700
+Wire Wire Line
+	4200 2700 4200 2800
+Wire Wire Line
+	4400 2650 4400 3150
+Wire Wire Line
+	4400 3150 4200 3150
+Wire Wire Line
+	4200 3150 4200 3100
+Wire Wire Line
+	4200 3150 4200 3200
+Connection ~ 4200 3150
+$Comp
+L power:GND #PWR?
+U 1 1 5F3FDE7B
+P 3200 2850
+F 0 "#PWR?" H 3200 2600 50  0001 C CNN
+F 1 "GND" H 3250 2650 50  0000 C CNN
+F 2 "" H 3200 2850 50  0001 C CNN
+F 3 "" H 3200 2850 50  0001 C CNN
+	1    3200 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2650 3200 2750
+Wire Wire Line
+	3600 2650 3600 2750
+Wire Wire Line
+	3600 2750 3200 2750
+Connection ~ 3200 2750
+Wire Wire Line
+	3200 2750 3200 2850
+$Comp
+L power:GND #PWR?
+U 1 1 5F3FE579
+P 4200 3550
+F 0 "#PWR?" H 4200 3300 50  0001 C CNN
+F 1 "GND" H 4250 3350 50  0000 C CNN
+F 2 "" H 4200 3550 50  0001 C CNN
+F 3 "" H 4200 3550 50  0001 C CNN
+	1    4200 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3500 4200 3550
+Text HLabel 3800 2750 3    50   Input ~ 0
+SIG
+Wire Wire Line
+	3800 2650 3800 2750
+Text HLabel 3400 3300 3    50   Input ~ 0
+V+
+Wire Wire Line
+	3400 2650 3400 3150
+$Comp
+L Device:C C?
+U 1 1 5F3FF9B6
+P 3650 3350
+F 0 "C?" H 3750 3400 50  0000 L CNN
+F 1 "2.2u" H 3750 3300 50  0000 L CNN
+F 2 "" H 3688 3200 50  0001 C CNN
+F 3 "~" H 3650 3350 50  0001 C CNN
+	1    3650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F400B62
+P 3650 3550
+F 0 "#PWR?" H 3650 3300 50  0001 C CNN
+F 1 "GND" H 3700 3350 50  0000 C CNN
+F 2 "" H 3650 3550 50  0001 C CNN
+F 3 "" H 3650 3550 50  0001 C CNN
+	1    3650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3500 3650 3550
+Wire Wire Line
+	3650 3200 3650 3150
+Wire Wire Line
+	3650 3150 3400 3150
+Connection ~ 3400 3150
+Wire Wire Line
+	3400 3150 3400 3300
+Text HLabel 4600 2750 3    50   Input ~ 0
+MODE
+Wire Wire Line
+	4600 2650 4600 2750
+$Comp
+L LED:IR204A D?
+U 1 1 5F402F1D
+P 4600 1500
+F 0 "D?" V 5100 1550 50  0000 R CNN
+F 1 "IR204A" V 5000 1550 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 4600 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 4550 1500 50  0001 C CNN
+	1    4600 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 1700 4600 1750
+Wire Wire Line
+	4600 1350 4600 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F40605D
+P 4400 1500
+F 0 "D?" V 4900 1650 50  0000 R CNN
+F 1 "IR204A" V 4800 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 4400 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 4350 1500 50  0001 C CNN
+	1    4400 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4400 1700 4400 1750
+Wire Wire Line
+	4400 1350 4400 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F40779F
+P 4200 1500
+F 0 "D?" V 4700 1650 50  0000 R CNN
+F 1 "IR204A" V 4600 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 4200 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 4150 1500 50  0001 C CNN
+	1    4200 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4200 1700 4200 1750
+Wire Wire Line
+	4200 1350 4200 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F40824F
+P 4000 1500
+F 0 "D?" V 4500 1650 50  0000 R CNN
+F 1 "IR204A" V 4400 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 4000 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 3950 1500 50  0001 C CNN
+	1    4000 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 1700 4000 1750
+Wire Wire Line
+	4000 1350 4000 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F408AC1
+P 3800 1500
+F 0 "D?" V 4300 1650 50  0000 R CNN
+F 1 "IR204A" V 4200 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 3800 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 3750 1500 50  0001 C CNN
+	1    3800 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 1700 3800 1750
+Wire Wire Line
+	3800 1350 3800 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F4092E3
+P 3600 1500
+F 0 "D?" V 4100 1650 50  0000 R CNN
+F 1 "IR204A" V 4000 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 3600 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 3550 1500 50  0001 C CNN
+	1    3600 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3600 1700 3600 1750
+Wire Wire Line
+	3600 1350 3600 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F409C27
+P 3400 1500
+F 0 "D?" V 3900 1650 50  0000 R CNN
+F 1 "IR204A" V 3800 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 3400 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 3350 1500 50  0001 C CNN
+	1    3400 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3400 1700 3400 1750
+Wire Wire Line
+	3400 1350 3400 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F40A858
+P 3200 1500
+F 0 "D?" V 3700 1650 50  0000 R CNN
+F 1 "IR204A" V 3600 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 3200 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 3150 1500 50  0001 C CNN
+	1    3200 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3200 1700 3200 1750
+Wire Wire Line
+	3200 1350 3200 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F40B6E3
+P 3000 1500
+F 0 "D?" V 3500 1650 50  0000 R CNN
+F 1 "IR204A" V 3400 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 3000 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 2950 1500 50  0001 C CNN
+	1    3000 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3000 1700 3000 1750
+Wire Wire Line
+	3000 1350 3000 1400
+$Comp
+L LED:IR204A D?
+U 1 1 5F40C406
+P 2800 1500
+F 0 "D?" V 3300 1650 50  0000 R CNN
+F 1 "IR204A" V 3200 1650 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 2800 1675 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 2750 1500 50  0001 C CNN
+	1    2800 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2800 1350 2800 1400
+Wire Wire Line
+	2800 2750 3000 2750
+Wire Wire Line
+	3000 2750 3000 2650
+Wire Wire Line
+	2800 1700 2800 2750
+Wire Wire Line
+	2800 1350 3000 1350
+Connection ~ 3000 1350
+Wire Wire Line
+	3000 1350 3200 1350
+Connection ~ 3200 1350
+Wire Wire Line
+	3200 1350 3400 1350
+Connection ~ 3400 1350
+Wire Wire Line
+	3400 1350 3600 1350
+Connection ~ 3600 1350
+Wire Wire Line
+	3600 1350 3800 1350
+Connection ~ 3800 1350
+Wire Wire Line
+	3800 1350 4000 1350
+Connection ~ 4000 1350
+Wire Wire Line
+	4000 1350 4200 1350
+Connection ~ 4200 1350
+Wire Wire Line
+	4200 1350 4400 1350
+Connection ~ 4400 1350
+Wire Wire Line
+	4400 1350 4600 1350
+Text HLabel 4700 1350 2    50   Input ~ 0
+VLED
+Wire Wire Line
+	4700 1350 4600 1350
+Connection ~ 4600 1350
+Text Notes 4350 3400 0    50   ~ 0
+VFULL = 1.25 * (1+R2/R1)\nILED = 12.5/R1
+Text Notes 4700 2950 0    50   ~ 0
+MODE\nDOT: OPEN\nBAR: V+
+$EndSCHEMATC
